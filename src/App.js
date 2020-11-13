@@ -7,6 +7,7 @@ import { cleanup } from '@testing-library/react';
 
 function App() {
   const id = useRef(1)
+  console.log(id)
 
   const [mode, setMode] = useState("All")
 
@@ -20,7 +21,6 @@ function App() {
     }
     return todoData
   })
-  console.log(id)
 
   const handleAddTodos =(e) => {
     if(!e.target.value) return
