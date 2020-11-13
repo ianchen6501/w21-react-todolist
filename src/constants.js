@@ -1,5 +1,3 @@
-
-
 /* Extra small devices (phones, 600px and down) */
 export const MEDIA_QUERY_ES = '@media only screen and (max-width: 600px)'
 

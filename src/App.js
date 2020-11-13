@@ -7,12 +7,11 @@ import { cleanup } from '@testing-library/react';
 
 function App() {
   const id = useRef(1)
-  console.log(id)
-
   const [mode, setMode] = useState("All")
 
   const [todos, setTodos] = useState(() => {
     let todoData = window.localStorage.getItem('todos')
+    console.log(todoData.length)
     if (todoData) {
       todoData = JSON.parse(todoData)
       id.current = todoData[todoData.length - 1].id + 1
@@ -51,7 +50,6 @@ function App() {
   }
 
   const handleToggleTodo = (id) => {
-    console.log(todos)
     setTodos(todos.map(todo => {
       if(todo.id !== id ) return todo
       return {
