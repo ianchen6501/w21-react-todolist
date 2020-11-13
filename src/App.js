@@ -11,7 +11,6 @@ function App() {
 
   const [todos, setTodos] = useState(() => {
     let todoData = window.localStorage.getItem('todos')
-    console.log(todoData.length)
     if (todoData) {
       todoData = JSON.parse(todoData)
       id.current = todoData[todoData.length - 1].id + 1
